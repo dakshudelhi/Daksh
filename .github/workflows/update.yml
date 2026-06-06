@@ -17,12 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch Krishna Playlist
+      - name: Fetch Daksh1 Playlist
         run: |
-          curl -f -L "https://stream.kliv.in/Jiotv+44/playlist.html" -o krishna9.m3u
+          curl -f -L "https://stream.kliv.in/Jiotv+44/playlist.html" -o Daksh1.m3u
 
           # Stop if Cloudflare 522 page is downloaded
-          if grep -qi "error code: 522" krishna9.m3u; then
+          if grep -qi "error code: 522" Daksh1.m3u; then
             echo "Cloudflare 522 detected"
             exit 1
           fi
@@ -32,7 +32,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add krishna9.m3u
+          git add Daksh1.m3u
 
           git diff --staged --quiet || git commit -m "Update playlist $(date)"
           git push
