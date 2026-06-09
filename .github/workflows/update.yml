@@ -19,7 +19,7 @@ jobs:
 
       - name: Fetch Daksh1 Playlist
         run: |
-          curl -f -L "https://stream.kliv.in/Jiotv+44/playlist.html" -o Daksh1.m3u
+          curl -f -L "https://stream.kliv.in/Jiotv+90/playlist.html" -o Daksh1.m3u
 
           # Stop if Cloudflare 522 page is downloaded
           if grep -qi "error code: 522" Daksh1.m3u; then
