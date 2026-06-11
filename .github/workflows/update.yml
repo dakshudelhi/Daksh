@@ -1,31 +1,22 @@
-name: Update Daksh Playlist
-
 on:
   schedule:
-    - cron: "30 2 * * *"
-    - cron: "30 14 * * *"
+    - cron: "0 */6 * * *"   # every 6 hours
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Fetch Daksh1 Playlist
+      - name: Fetch Playlist
         run: |
           curl -f -L "https://stream.kliv.in/Jiotv+90/playlist.html" -o Daksh1.m3u
 
-          # Stop if Cloudflare 522 page is downloaded
-          if grep -qi "error code: 522" Daksh1.m3u; then
-            echo "Cloudflare 522 detected"
-            exit 1
-          fi
+          # unique line so file always changes
+          echo "" >> Daksh1.m3u
+          echo "# Updated: $(date -u)" >> Daksh1.m3u
 
       - name: Commit and push
         run: |
@@ -33,6 +24,5 @@ jobs:
           git config user.email "actions@github.com"
 
           git add Daksh1.m3u
-
-          git diff --staged --quiet || git commit -m "Update playlist $(date)"
+          git commit -m "Playlist update $(date -u)"
           git push
