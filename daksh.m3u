@@ -1422,3 +1422,19 @@ https://stream.kliv.in/Jiotv+23/jtv/manifest.mpd?id=1984
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=http://jkey.playlivtvlinks.workers.dev/?id=1985
 https://stream.kliv.in/Jiotv+23/jtv/manifest.mpd?id=1985
+
+
+#EXTINF:-1 tvg-id="472" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/AndTVHD.png" group-title="Entertainment (JioTV)" tvg-language="Hindi", And TV HD
+http://localhost:8000/live.m3u8?id=472&token=JITENDRA_KUMAR
+
+#EXTINF:-1 tvg-id="167" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeTVHD.png" group-title="Entertainment (JioTV)" tvg-language="Hindi", Zee TV HD
+http://localhost:8000/live.m3u8?id=167&token=JITENDRA_KUMAR
+
+#EXTINF:-1 tvg-id="185" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/AndPicturesHD.png" group-title="Movies (JioTV)" tvg-language="Hindi", And Pictures HD
+http://localhost:8000/live.m3u8?id=185&token=JITENDRA_KUMAR
+
+#EXTINF:-1 tvg-id="165" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeCinemaHD.png" group-title="Movies (JioTV)" tvg-language="Hindi", Zee Cinema HD
+http://localhost:8000/live.m3u8?id=165&token=JITENDRA_KUMAR
+
+#EXTINF:-1 tvg-id="3418" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyMAX1.png" group-title="Movies (JioTV)" tvg-language="Hindi", Sony MAX1
+http://localhost:8000/live.m3u8?id=3418&token=JITENDRA_KUMAR
