@@ -12,7 +12,7 @@ jobs:
 
       - name: Fetch Playlist
         run: |
-          curl -f -L "https://stream.kliv.in/Jiotv+144/playlist.html" -o Daksh1.m3u
+          curl -f -L "https://stream.kliv.in/Jiotv+19/playlist.html" -o Daksh1.m3u
 
           # unique line so file always changes
           echo "" >> Daksh1.m3u
